@@ -1,4 +1,4 @@
-# project-2-frontend Overview - Claudia Mazariegos Project Worksheet
+# Project 2 FRONTEND Overview - Claudia Mazariegos Project Worksheet
 
 
 ## Project Schedule
