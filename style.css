@@ -148,3 +148,8 @@ img {
   flex-wrap: wrap;
   position: relative;
 }
+
+button {
+  margin-top: 15px !important;
+  margin-right: 15px !important;
+}
