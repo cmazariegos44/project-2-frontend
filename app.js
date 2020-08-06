@@ -13,51 +13,55 @@ toggleButton.addEventListener('click', () => {
 // ==NAV BAR ONLY end ==
 
 
-//get data from BACKEND 
-
-//DONT TOUCH ARCHIVED CODE =======================
+//TRYING AGAIN PART 2 =======================
 const addItems = function(dataGet){
-    //append something to root id
+    //loop through the items array 
     for(var i = 0; i < dataGet.length; i++){
+      //variable for the items ID array
     const id = dataGet[i]._id;
+    //div to print the items name
     $(".root").append(`<div><p class= "item">${dataGet[i].name}</p></div>`);
+    //div to show the URLs Image
     $(".root").append(`<div><img src="${dataGet[i].url}"></div>`);
-    // $(".root").append(`<button id="button1">Add to cart</button>`);
+    //Add to cart button (no functionality yet)
+    $(".root").append(`<button id="button1" class='btn btn-info'>Add to cart</button>`);
+    //Variable for Add comment button ==========  button text ===== event listener on click == addComment funtcion
     const $button = $("<button class='btn btn-info'>").text("Add Comment").on("click", () => addComment(id));
+    //appending add comment button to root div
     $(".root").append($button);
-    $(".root").append(`<div class="review"><input type="text" id="comment"> Leave Review </input></div>`);
+    //appending the leave review input
+    $(".root").append(`<div class="review"><input type="text" id="comment"> Leave Review </input></div>`);//appending the rating input
     $(".root").append(`<div><input type="text" id="rating"> Rating </input></div>`);
-    }
+    } //FIRST FOR lOOP FUNCTION ENDS ===========
     console.log(dataGet, "This worked!")
-}
+//for loop again through the items level of array
+    for(var k = 0; k < dataGet.length; k++){
+      const id = dataGet[k]._id;
+      //for loop through the reviews level of array one step down from items
+      for(var j = 0; j < dataGet[k].reviews.length; j++){
+        const reviews = dataGet[j]._id;
+        //PRINTS THE COMMENT from array
+        $(".root").append(`<div>${dataGet[k].reviews[j].comment}</div>`);
+        //PRINTS THE RATING (AND ADDS DELETE BUTTON FOR NOW)
+        $(".root").append(`<div>${dataGet[k].reviews[j].rating}</div><button class="btn btn-secondary" itemId="${dataGet[k]._id}" ratingid="${dataGet[k].reviews[j]._id}">Delete Rating</button>`);
 
-//IMPROVED FROM ABOVE TO BE IN A DIV =======================
-// const addItems = function(dataGet){
-//   //append something to root id
-//   console.log(dataGet, "THIS IS MY DATA")
-//   for(var i = 0; i < dataGet.length; i++){
-//   const id = dataGet[i]._id;
-//   $(".root").append(`<div class="container"><div><p class="${dataGet[i].name}">${dataGet[i].name}</p></div><div><img src="${dataGet[i].url}"></div><div class="review"><input type="text" id="comment"> Leave Review </input></div><div><input type="text" id="rating"> Rating </input></div><button class='btn btn-info'>Add Comment</button><button>See Reviews</button></div>`)
-//   const $button = $('btn btn-info').on("click", () => addComment(id));
-//   // $(".root").append($button);
-//   console.log(dataGet[i], "This is it!")
-//   }
+        
+        const $div1 = $('<div>').text(dataGet[k].reviews[j].comment);
+        //ARCHIVED
+        // const $button1 = $(`<button itemiid="${dataGet[k]._id}" commentid="${dataGet[k].reviews[j]._id}">`).attr('data-commentid', dataGet[k].reviews[j]._id).text('Delete Review').on("click", deleteComment);
+        const $button1 = $(`<button class='btn btn-info' commentid="${dataGet[k].reviews[j]._id}">`).attr('dataGet-commentid', dataGet[k].reviews[j]._id).text('Delete Review').on("click", deleteComment);
+        $(".root").append($button1)
+        // $(`.${dataGet[k].name}`).append($div1)
+      }
+    }
+  }
 
 
-// for(var k = 0; k < dataGet.length; k++){
-//   for(var j = 0; j < dataGet[k].reviews.length; j++){
-//     // $(`.${dataGet[k].name}`).append(`<div>${dataGet[k].reviews[j].comment}</div><button itemId="${dataGet[k]._id}" commentId="${dataGet[k].reviews[j]._id}">Delete Review</button>`)
-//     const $div = $('<div>').text(dataGet[k].reviews[j].comment)
-//     const $button1 = $('<button class="deleteButton">').attr('data-itemid',dataGet[k]._id).attr('data-commentid', dataGet[k].reviews[j]._id).text('Delete Review').on("click", deleteComment)
-//     $div.append($button1)
-//     $(`.${dataGet[k].name}`).append($div)
-//   }
-// }
+  const deleteComment = async (event) => {
+    console.log(event.target.dataSet.itemId)
+    console.log(event.target.dataSet.commentid)
+  }
 
-// const deleteComment = async (event) => {
-//   console.log(event.target.dataset.itemid)
-//   console.log(event.target.dataset.commentid)
-// }
 
 
 //pulling backend END
@@ -82,22 +86,17 @@ const addComment = async function(itemId){
 
 
 
-// const deleteReview = async function(itemId){
-//   const reviews = {
-//     comment: $("#reviews").val()
-//   }
-//   console.log(itemId);
+const deleteReview = async function(itemId){
+  console.log(itemId);
 
-//   const response = await fetch("http://localhost:3000/shop/review/" + itemId, 
-//         {
-//           method: "DELETE",
-//           headers: {
-//             'Content-Type': 'application/json'
-//           },
-//           body: JSON.stringify(review)
-//       }
-//   )
-// };
+  const response = await fetch(`"http://localhost:3000/shop/review/${dataGet[k].reviews[j]._id}`, {
+    method: "delete",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(review)
+})}
+
 
 
 //Attempt At AXIOS//
