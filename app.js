@@ -1,5 +1,5 @@
-const apiUrl = "https://shop-project2.herokuapp.com/"
- //"http://localhost:3000" //"https://shop-project2.herokuapp.com/"
+const apiUrl = "https://shop-project2.herokuapp.com"
+ //"http://localhost:3000" //"https://shop-project2.herokuapp.com"
 
 // ==NAV BAR ONLY==
 
