@@ -47,10 +47,10 @@ My wireframe's are uploaded to cloudinary.
 | Shopping cart| Incomplete | 4 hrs |	0 hrs |
 | Work on Navigation Hamburger Bar with Jquery  | Complete | 4 hrs |7 hrs |
 | Finalize Project Notes and Documentation  | Complete | 2 hrs |	2 hrs |	
-Estimated Hours: 28 hours
-Total Actual Hours: 26 hours
+| Estimated Hours:  | Complete | 28 hours |	 |
+| Total Actual Hours: | Complete |  |	26 hours |
 
-
+## Code Snippet 
 
 ## Issues and Resolutions
 I think i over complicated my code by mashing everything in my app.js code into one function.
