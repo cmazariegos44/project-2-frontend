@@ -15,8 +15,7 @@
    position: fixed;
    justify-content: space-between;
    align-items: center;
-   background-color: rgb(200, 234, 242);
-   border-bottom:  rgb(236, 240, 162) solid 5px;
+   background-color: rgb(223, 218, 235);
    color: black;
    width: 100%;
    top: 0px;
@@ -126,11 +125,48 @@
 }
 /*======== NAV END ========*/
 
+.itemDiv  {
+  background-color: rgba(254, 195, 240, 0.71);  
+  border-radius: 20px;
+  margin-top: 20px;
+}
 
-    /*BASE(MOBILE)DEFAULT*/
-body {
-  /* margin-right: auto;
-  margin-left: auto; */
+
+.pageCoverPhoto {
+  display: flex;
+  width: 100%;
+  max-width: 100% ;
+  flex-direction: row;
+  height: 400px;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  background-image: url(https://res.cloudinary.com/techhire/image/upload/v1596764618/AdobeStock_232160763_Preview_n6a9hi.jpg);
+  background-position: 0px;
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*BASE(MOBILE)DEFAULT*/
+/* body {
+  background-color: rgb(177, 230, 230);
+} */
+
+
+@media screen and (min-width: 600px) {
+  .itemDiv {
+    background-color: rgba(247, 237, 122, 0.72); 
+    border-radius: 20px;
+  }
+}
+
+
+@media screen and (min-width: 900px) {
+  .itemDiv  {
+    background-color: rgba(149, 204, 210, 0.72);  
+    border-radius: 20px;
+  }
 }
 
 img {
@@ -152,4 +188,9 @@ img {
 button {
   margin-top: 15px !important;
   margin-right: 15px !important;
+}
+
+.item{
+  font-size: 20px;
+  font-weight: 300;
 }

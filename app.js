@@ -7,7 +7,7 @@ const apiUrl = "https://shop-project2.herokuapp.com"
 
 let firstDiv = $(".navbar").append('<div class ="brand-title"> Claudia\'s Shop</div>')
 let firstAttr = $(".navbar").append('<a href ="#" class="toggle-button"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>')
-let secondDiv = $(".navbar").append('<div class="navbar-links"><ul><li><a class="aaa" href="#startabout">About Us</a></li><li><a class="aaa" href="#skills">Shop</a></li><li><a class="aaa" href="#contact">Contact</a></li></ul></div>')
+let secondDiv = $(".navbar").append('<div class="navbar-links"><ul><li><a class="aaa" href="#pageCoverPhoto">Cover Photo</a></li><li><a class="aaa" href="#products">Shop</a></li><li><a class="aaa" href="#contact">Contact</a></li></ul></div>')
 
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
