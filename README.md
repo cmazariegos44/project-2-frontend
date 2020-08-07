@@ -41,7 +41,7 @@ My wireframe's are uploaded to cloudinary.
 | --- | :---: |  :---: | :---: |
 | Research ideas	| Complete 	| 1 hr |3 hrs 
 | Wireframes / Priority Matrix / Timeline	| Complete	| 4 hrs | 4 hrs 
-| HTML Framing	| Incomplete | 1 hr | 5 hrs 
+| HTML Framing	| Complete | 1 hr | 5 hrs 
 | CSS Grid/Flexbox outline Mobile	| Complete | 5 hrs |	3 hrs 
 | CSS Grid/Flexbox outline Tablet & Desktop  | Complete | 7 hrs |	2 hrs 
 | Shopping cart| Incomplete | 4 hrs |	0 hrs 
@@ -51,7 +51,8 @@ My wireframe's are uploaded to cloudinary.
 | Total Actual Hours: | Complete |  |	26 hours 
 
 ## Code Snippet 
+I was happy that i was able to successfuly use a nested for loop.
 
 ## Issues and Resolutions
-I think i over complicated my code by mashing everything in my app.js code into one function.
+I mashed most of my functionality into one function. In hindsight I think it would have been easier to break it out by function functionality like in pizza rat.
 
