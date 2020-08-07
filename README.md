@@ -38,17 +38,17 @@ My wireframe's are uploaded to cloudinary.
 ## MVP FRONTEND Timeline & Priority Matrix 
 
 |Deliverable	| Status	| Time Spent |Actual Time Spent
-| --- | :---: |  :---: | 
-| Research ideas	| Complete 	| 1 hr |3 hrs |
-| Wireframes / Priority Matrix / Timeline	| Complete	| 4 hrs | 4 hrs |
-| HTML Framing	| Incomplete | 1 hr | 5 hrs |
-| CSS Grid/Flexbox outline Mobile	| Complete | 5 hrs |	3 hrs |
-| CSS Grid/Flexbox outline Tablet & Desktop  | Complete | 7 hrs |	2 hrs |
-| Shopping cart| Incomplete | 4 hrs |	0 hrs |
-| Work on Navigation Hamburger Bar with Jquery  | Complete | 4 hrs |7 hrs |
-| Finalize Project Notes and Documentation  | Complete | 2 hrs |	2 hrs |	
-| Estimated Hours:  | Complete | 28 hours |	 |
-| Total Actual Hours: | Complete |  |	26 hours |
+| --- | :---: |  :---: | :---: |
+| Research ideas	| Complete 	| 1 hr |3 hrs 
+| Wireframes / Priority Matrix / Timeline	| Complete	| 4 hrs | 4 hrs 
+| HTML Framing	| Incomplete | 1 hr | 5 hrs 
+| CSS Grid/Flexbox outline Mobile	| Complete | 5 hrs |	3 hrs 
+| CSS Grid/Flexbox outline Tablet & Desktop  | Complete | 7 hrs |	2 hrs 
+| Shopping cart| Incomplete | 4 hrs |	0 hrs 
+| Work on Navigation Hamburger Bar with Jquery  | Complete | 4 hrs |7 hrs 
+| Finalize Project Notes and Documentation  | Complete | 2 hrs |	2 hrs 
+| Estimated Hours:  | Complete | 28 hours |	 
+| Total Actual Hours: | Complete |  |	26 hours 
 
 ## Code Snippet 
 
