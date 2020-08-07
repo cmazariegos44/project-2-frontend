@@ -5,12 +5,12 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 0 (Friday)| Wireframes / Priority Matrix / Timeline/ Project Description | Incomplete
-|Day 1 (Sunday)| Project Planning -  | Incomplete
-|Day 2 (Monday)| Back-end & Front-end (backend build)  | Incomplete
-|Day 3 (Tuesday)| Front-end Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4(Wednesday)| Work on Back-end | Incomplete
-|Day 5 (Thursday)| Final Touches to make Front End Better| Incomplete
+|Day 0 (Friday)| Wireframes / Priority Matrix / Timeline/ Project Description | Complete
+|Day 1 (Sunday)| Project Planning -  | Complete
+|Day 2 (Monday)| Back-end & Front-end (backend build)  | Complete
+|Day 3 (Tuesday)| Front-end Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 4(Wednesday)| Work on Back-end | Complete
+|Day 5 (Thursday)| Final Touches to make Front End Better| Complete
 |Day 6 (Friday)| Present | Incomplete
 
 
@@ -37,27 +37,21 @@ My wireframe's are uploaded to cloudinary.
 
 ## MVP FRONTEND Timeline & Priority Matrix 
 
-|Deliverable	| Status	| Time Spent |
+|Deliverable	| Status	| Time Spent |Actual Time Spent
 | --- | :---: |  :---: | 
-| Research ideas	| Complete 	| 1 hr |
-| Wireframes / Priority Matrix / Timeline	| Incomplete	| 4 hrs |
-| HTML Framing	| Incomplete | 1 hr |
-| CSS Grid/Flexbox outline Mobile	| Incomplete | 5 hrs |	
-| CSS Grid/Flexbox outline Tablet & Desktop  | Incomplete | 7 hrs |	
-| Shopping cart| Incomplete | 4 hrs |	
-| Work on Navigation Hamburger Bar with Jquery  | Incomplete | 4 hrs |
-| Finalize Project Notes and Documentation  | Incomplete | 2 hrs |		
+| Research ideas	| Complete 	| 1 hr |3 hrs |
+| Wireframes / Priority Matrix / Timeline	| Complete	| 4 hrs | 4 hrs |
+| HTML Framing	| Incomplete | 1 hr | 5 hrs |
+| CSS Grid/Flexbox outline Mobile	| Complete | 5 hrs |	3 hrs |
+| CSS Grid/Flexbox outline Tablet & Desktop  | Complete | 7 hrs |	2 hrs |
+| Shopping cart| Incomplete | 4 hrs |	0 hrs |
+| Work on Navigation Hamburger Bar with Jquery  | Complete | 4 hrs |7 hrs |
+| Finalize Project Notes and Documentation  | Complete | 2 hrs |	2 hrs |	
+Estimated Hours: 28 hours
+Total Actual Hours: 26 hours
 
 
-
-## Additional Libraries - Resources used 
-- project 2 FRONTEND - used resources 
-- TBD
-
-## Code Snippet 
-
-The code below: TBD
 
 ## Issues and Resolutions
-TBD
+I think i over complicated my code by mashing everything in my app.js code into one function.
 
