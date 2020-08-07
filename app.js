@@ -1,4 +1,9 @@
+const apiUrl = "https://shop-project2.herokuapp.com/"
+ //"http://localhost:3000" //"https://shop-project2.herokuapp.com/"
+
 // ==NAV BAR ONLY==
+
+// const { Console } = require("console")
 
 let firstDiv = $(".navbar").append('<div class ="brand-title"> Claudia\'s Shop</div>')
 let firstAttr = $(".navbar").append('<a href ="#" class="toggle-button"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>')
@@ -15,6 +20,7 @@ toggleButton.addEventListener('click', () => {
 
 //TRYING AGAIN PART 2 =======================
 const addItems = function(dataGet){
+    $(".root").empty();
     //loop through the items array 
     for(var i = 0; i < dataGet.length; i++){
     const item = dataGet[i];
@@ -23,6 +29,7 @@ const addItems = function(dataGet){
     const itemDiv = $(`<div class="itemDiv">`)
     //div to print the items name
     itemDiv.append(`<div><p class= "item">${dataGet[i].name}</p></div>`);
+
     //div to show the URLs Image
     itemDiv.append(`<div class= "image"><img src="${dataGet[i].url}"></div>`);
     //Add to cart button (no functionality yet)
@@ -35,6 +42,17 @@ const addItems = function(dataGet){
     itemDiv.append(`<div class="review"><input type="text" id="comment-${id}"> Leave Review </input></div>`);//appending the rating input
     itemDiv.append(`<div id="ratingDiv"><input type="text" id="rating-${id}"> Rating </input></div>`);
 
+
+  //DONT TOUCH THE ABOVE ONLY BELOW =======!!!!!!
+
+
+    itemDiv.append(`<input type="text" id="item-${id}"></input>`)
+
+    const $button2 = $("<button class='btn btn-info'>").text("Change Title").on("click", () => changeTitle(id));
+    itemDiv.append($button2);
+
+
+ //DONT TOUCH THE BELOW ONLY ABOVE ========!!!!!!!!
 
     const commentDiv = $(`<div class="commentDiv">`)
 
@@ -54,10 +72,21 @@ const addItems = function(dataGet){
     itemDiv.append(commentDiv)
     $(".root").append(itemDiv);
 
-    } //FIRST FOR lOOP FUNCTION ENDS ===========
 
+    } //FIRST FOR lOOP FUNCTION ENDS ===========
     console.log(dataGet, "This worked!")
-  };
+  };//BIG FUNCTION ENDS ========
+
+//pulling backend END
+// const changeTitle = async function(name){
+//   const response = await fetch("http://localhost:3000/shop/:name" , 
+//         {
+//           method: "PUT"
+//           },
+//           console.log(response)
+//       }
+//   )
+// };
 
 
 //pulling backend END
@@ -68,7 +97,7 @@ const addComment = async function(itemId){
       }
       console.log(itemId);
 
-      const response = await fetch("http://localhost:3000/shop/review/" + itemId, 
+      const response = await fetch(apiUrl + "/shop/review/" + itemId, 
             {
               method: "POST",
               headers: {
@@ -77,39 +106,68 @@ const addComment = async function(itemId){
               body: JSON.stringify(review)
           }
       )
+
+      refresh();
 };
 
 const deleteReview = async function(itemId, reviewId) {
+
         
-       const response = await fetch("http://localhost:3000/shop/review/" + itemId + "/" + reviewId, 
+       const response = await fetch(apiUrl + "/shop/review/" + itemId + "/" + reviewId, 
 
        {
          method: "DELETE"
        }
        
        )
-       console.log(response)
+       console.log(response, "HI")
+       refresh();
       };
 
 
-const changeTitle = async function(responseData) {
-  console.log(responseData, "this!!!")
 
+//pulling backend END
+const changeTitle = async function(itemId){
+  const itemName = {
+    name: $(`#item-${itemId}`).val(),
+  }
+  console.log(itemId);
+
+  const response = await fetch(apiUrl + "/shop/" + itemId, 
+        {
+          method: "PUT",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(itemName)
+      }
+  )
+  refresh();
 };
+
+
 
 
 //Attempt At AXIOS//
 // gets the initial data for images and name
-axios.get('http://localhost:3000/shop').then(response => {
-  addItems(response.data)
-  console.log(response, "hello")
-  // console.log(response.data, "hi")
-});
+const refresh = () =>{
+
+
+    axios.get(apiUrl + '/shop').then(response => {
+      addItems(response.data)
+      console.log(response, "hello")
+      // console.log(response.data, "hi")
+
+    })};
+
+
+    refresh()
+
 //Attempt At AXIOS//
 
-axios.put("http://localhost:3000/shop/:id").then(response => {
-  changeTitle(response.data)
-});
+// axios.put(apiUrl + "/shop/:5f2c28cee8b94f08ec4f6b26").then(response => {
+//   changeTitle(response)
+// });
 
 
 
