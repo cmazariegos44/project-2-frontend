@@ -24,20 +24,20 @@ const addItems = function(dataGet){
     const item = dataGet[i];
       //variable for the items ID array
     const id = dataGet[i]._id;
-    const itemDiv = $(`<div class="itemDiv">`)
+    const itemDiv = $(`<div class="itemDivMAIN">`)
     //div to print the items name
     itemDiv.append(`<div><p class= "item">${dataGet[i].name}</p></div>`);
 
     //div to show the URLs Image
-    itemDiv.append(`<div class= "image"><img src="${dataGet[i].url}"></div>`);
+    itemDiv.append(`<div class= "image-center"><img src="${dataGet[i].url}"></div>`);
     //Add to cart button (no functionality yet)
-    itemDiv.append(`<button id="button1" class='btn btn-info'>Add to cart</button>`);
+    // itemDiv.append(`<button id="button1" class='btn btn-info'>Add to cart</button>`);
     //Variable for Add comment button ==========  button text ===== event listener on click == addComment funtcion
-    const $button = $("<button class='btn btn-info'>").text("Add Comment").on("click", () => addComment(id));
+    const $button = $("<button class='btn btn-info'>").text("Submit Review").on("click", () => addComment(id));
     //appending add comment button to root div
     itemDiv.append($button);
     //appending the leave review input
-    itemDiv.append(`<div class="review"><input type="text" id="comment-${id}"> Leave Review </input></div>`);//appending the rating input
+    itemDiv.append(`<div class="review-indent"><input type="text" id="comment-${id}"> Leave Review </input></div>`);//appending the rating input
     itemDiv.append(`<div id="ratingDiv"><input type="text" id="rating-${id}"> Rating </input></div>`);
 
 

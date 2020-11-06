@@ -131,10 +131,12 @@
 }
 /*======== NAV END ========*/
 
-.itemDiv  {
+.itemDivMAIN  {
   background-color: rgba(220, 220, 220, 0.71);  
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 20px;
+  float: left;
+  margin: 20px;
 }
 
 .commentDiv {
@@ -158,6 +160,10 @@
   background-position: 0px;
   background-size: cover;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+.image-center {
+  text-align: center
 }
 
 
@@ -210,4 +216,20 @@ button {
 .item{
   font-size: 20px;
   font-weight: 300;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 15px;
+
+}
+
+.ratingDiv .review-indent{
+  font-size: 15px;
+  /* font-weight: 300; */
+  text-align: center;
+  /* font-family: 'Josefin Sans', sans-serif; */
+}
+
+.btn btn-info {
+  margin: 15px;
+
 }
