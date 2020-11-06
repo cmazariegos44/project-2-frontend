@@ -132,7 +132,7 @@
 /*======== NAV END ========*/
 
 .itemDiv  {
-  background-color: rgba(0, 0, 0, 0.71);  
+  background-color: rgba(220, 220, 220, 0.71);  
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -169,7 +169,7 @@
 
 @media screen and (min-width: 600px) {
   .itemDiv {
-    background-color: rgba(247, 237, 122, 0.72); 
+    background-color:rgba(220, 220, 220, 0.71);   
     border-radius: 20px;
   }
 }
@@ -177,7 +177,7 @@
 
 @media screen and (min-width: 900px) {
   .itemDiv  {
-    background-color: rgba(149, 204, 210, 0.72);  
+    background-color: rgba(220, 220, 220, 0.71);  
     border-radius: 20px;
   }
 }
