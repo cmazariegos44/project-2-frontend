@@ -3,7 +3,9 @@ const apiUrl = "https://shop-project2.herokuapp.com"
 
 // ==NAV BAR ONLY==
 
-let firstDiv = $(".navbar").append('<div class ="brand-title"> ReeVue</div>')
+// const { Console } = require("console")
+
+let firstDiv = $(".navbar").append('<div class ="brand-title"> Claudia\'s Shop</div>')
 let firstAttr = $(".navbar").append('<a href ="#" class="toggle-button"><span class="bar"></span> <span class="bar"></span> <span class="bar"></span> </a>')
 let secondDiv = $(".navbar").append('<div class="navbar-links"><ul><li><a class="aaa" href="#pageCoverPhoto">Cover Photo</a></li><li><a class="aaa" href="#products">Shop</a></li><li><a class="aaa" href="#contact">Contact</a></li></ul></div>')
 
@@ -41,7 +43,8 @@ const addItems = function(dataGet){
     itemDiv.append(`<div id="ratingDiv"><input type="text" id="rating-${id}"> Rating </input></div>`);
 
 
-  //CHANGE TITLE CODE =======
+  //DONT TOUCH THE ABOVE ONLY BELOW =======!!!!!!
+
 
     itemDiv.append(`<input type="text" id="item-${id}"></input>`)
 
@@ -49,10 +52,11 @@ const addItems = function(dataGet){
     itemDiv.append($button2);
 
 
-  
+ //DONT TOUCH THE BELOW ONLY ABOVE ========!!!!!!!!
+
     const commentDiv = $(`<div class="commentDiv">`)
 
-  //NESTED FOR LOOP TO GET TO REVIEWS
+    
     for(var j = 0; j < dataGet[i].reviews.length; j++){
       const reviewId = dataGet[i].reviews[j]._id;
       //  PRINTS THE COMMENT from array
@@ -72,6 +76,17 @@ const addItems = function(dataGet){
     } //FIRST FOR lOOP FUNCTION ENDS ===========
     console.log(dataGet, "This worked!")
   };//BIG FUNCTION ENDS ========
+
+//pulling backend END
+// const changeTitle = async function(name){
+//   const response = await fetch("http://localhost:3000/shop/:name" , 
+//         {
+//           method: "PUT"
+//           },
+//           console.log(response)
+//       }
+//   )
+// };
 
 
 //pulling backend END
@@ -148,7 +163,26 @@ const refresh = () =>{
 
     refresh()
 
+//Attempt At AXIOS//
 
+// axios.put(apiUrl + "/shop/:5f2c28cee8b94f08ec4f6b26").then(response => {
+//   changeTitle(response)
+// });
+
+
+
+// const update = async (req, res) => {
+//   try{
+//       const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true});
+//       // const allGiphy = await giphy.find({});
+//       res.status(200).json(updatedItem);
+//   }
+//   catch(error){
+//       res.status(400).send(error)
+//   }
+
+
+//NEED CRUD
 
 
 
